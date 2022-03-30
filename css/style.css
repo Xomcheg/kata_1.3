@@ -286,9 +286,10 @@ img {
   left: 0;
   width: 7.5px;
   height: 10.3px;
-  background-image: url(/image/icon/arrow-down.png);
+  background-image: url(../image/icon/arrow-down.png);
   background-position: center;
   background-size: cover;
+  z-index: 1000;
 }
 
 .sistem-buttons {
