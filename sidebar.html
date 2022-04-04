@@ -10,110 +10,114 @@
 </head>
 
 <body>
-    <div class="sidebar">
-        <div class="sidebar__wrapper">
-            <div class="sidebar__header">
-                <button class="sidebar__header-btn sidebar__header-btn-close menu__btn">
-                </button>
-                <div class="sidebar__header-Logo">
-                    <a href="#" class="sidebar__header-link">
-                        <img src="assets/image/logo.png" alt="Логотип" class="sidebar__header-img">
-                    </a>
-
+    <sidebar class="sidebar">
+        <div class="sidebar__overlay"></div>
+        <div class="sidebar__inner">
+            <div class="sidebar__wrapper">
+                <div class="sidebar__wrapper-inner">
+                    <div class="sidebar__header">
+                        <button class="sidebar__header-btn sidebar__header-btn-close menu__btn">
+                        </button>
+                        <div class="sidebar__header-Logo">
+                            <a href="#" class="sidebar__header-link">
+                                <img src="assets/image/logo.png" alt="Логотип" class="sidebar__header-img">
+                            </a>
+                        </div>
+                        <button class="sidebar__header-btn sidebar__header-btn-serch menu__btn">
+                            <img src="assets/image/icon/search-icon.svg" alt="">
+                        </button>
+                    </div>
                 </div>
-                <button class="sidebar__header-btn sidebar__header-btn-serch menu__btn">
-                    <img src="assets/image/icon/search-icon.png" alt="">
-                </button>
-            </div>
 
-            <nav class="sidebar__menu">
-                <ul class="sidebar__menu-list">
-                    <li class="sidebar__menu-item">
-                        <a href="#" class="sidebar__menu-link">
-                            Ремонт техники
-                        </a>
-                    </li>
-                    <li class="sidebar__menu-item  sidebar__menu-item--active">
-                        <a href="#" class="sidebar__menu-link">
-                            Услуги и сервисы
-                        </a>
-                    </li>
-                    <li class="sidebar__menu-item">
-                        <a href="#" class="sidebar__menu-link">
-                            Корпоративным клиентам
-                        </a>
-                    </li>
-                    <li class="sidebar__menu-item">
-                        <a href="#" class="sidebar__menu-link">
-                            Продавцам техники
-                        </a>
-                    </li>
-                    <li class="sidebar__menu-item">
-                        <a href="#" class="sidebar__menu-link">
-                            Партнерам
-                        </a>
-                    </li>
-                    <li class="sidebar__menu-item">
-                        <a href="#" class="sidebar__menu-link">
-                            Производителям
-                        </a>
-                    </li>
-                    <li class="sidebar__menu-item">
-                        <a href="#" class="sidebar__menu-link">
-                            Наши сервисные центры
-                        </a>
-                    </li>
-                    <li class="sidebar__menu-item">
-                        <a href="#" class="sidebar__menu-link">
-                            Контакты
-                        </a>
-                    </li>
-                </ul>
-            </nav>
 
-            <div class="sidebar__footer">
-                <div class="sidebar__footer-actions actions">
-                    <ul class="actions__list">
-                        <li class="actions__item actions__item-communication">
-                            <button class="actions__btn">
-                                <img class="actions__img" src="assets/image/icon/call-icon.png" alt="">
-                            </button>
+                <nav class="sidebar__menu">
+                    <ul class="sidebar__menu-list">
+                        <li class="sidebar__menu-item">
+                            <a href="#" class="sidebar__menu-link">
+                                Ремонт техники
+                            </a>
                         </li>
-                        <li class="actions__item actions__item-communication">
-                            <button class="actions__btn">
-                                <img class="actions__img" src="assets/image/icon/chat-icon.png" alt="">
-                            </button>
+                        <li class="sidebar__menu-item  sidebar__menu-item--active">
+                            <a href="#" class="sidebar__menu-link">
+                                Услуги и сервисы
+                            </a>
                         </li>
-                        <li class="actions__item actions__item-communication">
-                            <button class="actions__btn">
-                                <img class="actions__img" src="assets/image/icon/profile-icon.png" alt="">
-                            </button>
+                        <li class="sidebar__menu-item">
+                            <a href="#" class="sidebar__menu-link">
+                                Корпоративным клиентам
+                            </a>
+                        </li>
+                        <li class="sidebar__menu-item">
+                            <a href="#" class="sidebar__menu-link">
+                                Продавцам техники
+                            </a>
+                        </li>
+                        <li class="sidebar__menu-item">
+                            <a href="#" class="sidebar__menu-link">
+                                Партнерам
+                            </a>
+                        </li>
+                        <li class="sidebar__menu-item">
+                            <a href="#" class="sidebar__menu-link">
+                                Производителям
+                            </a>
+                        </li>
+                        <li class="sidebar__menu-item">
+                            <a href="#" class="sidebar__menu-link">
+                                Наши сервисные центры
+                            </a>
+                        </li>
+                        <li class="sidebar__menu-item">
+                            <a href="#" class="sidebar__menu-link">
+                                Контакты
+                            </a>
                         </li>
                     </ul>
-                </div>
-                <a class="sidebar__footer-link sidebar__footer-link-email" href="mailto:mail@cps.com">
-                    mail@cps.com
-                </a>
-                <a class="sidebar__footer-link sidebar__footer-link-phone" href="tel:88008908900">
-                    8 800 890 8900
-                </a>
-                <div class="sidebar__language-btn language-buttons">
-                    <button class="language-buttons__btn language-buttons__btn--active">
-                        RU
-                    </button>
-                    <button class="language-buttons__btn">
-                        EN
-                    </button>
-                    <button class="language-buttons__btn">
-                        CH
-                    </button>
+                </nav>
+
+                <div class="sidebar__footer">
+                    <div class="sidebar__wrapper-inner">
+                        <div class="sidebar__footer-actions actions">
+                            <ul class="actions__list">
+                                <li class="actions__item actions__item-communication">
+                                    <button class="actions__btn">
+                                        <img class="actions__img" src="assets/image/icon/call-icon.svg" alt="">
+                                    </button>
+                                </li>
+                                <li class="actions__item actions__item-communication">
+                                    <button class="actions__btn">
+                                        <img class="actions__img" src="assets/image/icon/chat-icon.svg" alt="">
+                                    </button>
+                                </li>
+                                <li class="actions__item actions__item-communication">
+                                    <button class="actions__btn">
+                                        <img class="actions__img" src="assets/image/icon/profile-icon.svg" alt="">
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <a class="sidebar__footer-link sidebar__footer-link-email" href="mailto:mail@cps.com">
+                            mail@cps.com
+                        </a>
+                        <a class="sidebar__footer-link sidebar__footer-link-phone" href="tel:88008908900">
+                            8 800 890 8900
+                        </a>
+                        <div class="sidebar__language-btn language-buttons">
+                            <button class="language-buttons__btn language-buttons__btn--active">
+                                RU
+                            </button>
+                            <button class="language-buttons__btn">
+                                EN
+                            </button>
+                            <button class="language-buttons__btn">
+                                CH
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </div>
-
-
-    </div>
+    </sidebar>
 </body>
 
 </html>
