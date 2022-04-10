@@ -669,7 +669,7 @@ button {
         padding-left: 25px;
         @extend %lakes-medium;
         display: none;
-
+        transform: translateY(20px);
         &::after {
             content: '';
             position: absolute;
@@ -680,7 +680,7 @@ button {
             background-size: cover;
             background-position: center;
             left: 0;
-            top: 4px;
+            top: 3px;
             transition: .5s;
             transform: rotate(180deg);
         }
@@ -715,10 +715,17 @@ button {
     .brands__slider-item {
         height: 72px;
     }
+    .brands__buttton-arrow{
+        margin-top: 20px;
+    }
 }
 
-.brands__buttton-arrow.brands__buttton-arrow--active::after {
-    transform: rotate(0deg);
+.brands__buttton-arrow.brands__buttton-arrow--active{
+    transform: translateY(0);
+    &::after {
+        transform: rotate(0deg);
+    }
+    
 }
 
 

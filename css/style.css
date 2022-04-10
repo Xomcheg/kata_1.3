@@ -675,6 +675,8 @@ button {
   position: relative;
   padding-left: 25px;
   display: none;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
 }
 
 .brands__buttton-arrow::after {
@@ -687,7 +689,7 @@ button {
   background-size: cover;
   background-position: center;
   left: 0;
-  top: 4px;
+  top: 3px;
   -webkit-transition: .5s;
   transition: .5s;
   -webkit-transform: rotate(180deg);
@@ -717,6 +719,15 @@ button {
 
 .brands__slider.brands__slider--active .brands__slider-item {
   height: 72px;
+}
+
+.brands__slider.brands__slider--active .brands__buttton-arrow {
+  margin-top: 20px;
+}
+
+.brands__buttton-arrow.brands__buttton-arrow--active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .brands__buttton-arrow.brands__buttton-arrow--active::after {
