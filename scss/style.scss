@@ -52,6 +52,21 @@ button {
     margin: 0;
 }
 
+.subtitle {
+    border-top: 1px solid #D9FFF5;
+    background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+
+    &__title {
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: #7E7E82;
+        // letter-spacing: -0.2px;
+        padding: 16px;
+        @extend %lakes-regular;
+    }
+}
+
 .menu__btn {
     width: 40px;
     height: 40px;
@@ -109,6 +124,39 @@ button {
 
 }
 
+
+
+.test {
+    padding: 10px;
+
+    .slide {
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+
+
+    }
+
+    .slide-1 {
+        background-color: red;
+    }
+
+    .slide-2 {
+        background-color: green;
+    }
+
+    .slide-3 {
+        background-color: yellow;
+    }
+
+    .slide-4 {
+        background-color: blue;
+    }
+
+    .slide-5 {
+        background-color: black;
+    }
+}
 
 //------------------------------------------------------------------
 //END------------------------GLOBAL SETTINGS------------------------
@@ -396,7 +444,8 @@ button {
         position: relative;
         z-index: 1;
     }
-    &__wrapper-inner{
+
+    &__wrapper-inner {
         max-width: 85%;
         width: 100%;
         margin: 0 auto;
@@ -517,9 +566,10 @@ button {
         line-height: 0;
     }
 
-    .actions__btn{
+    .actions__btn {
         line-height: 0;
     }
+
     &__footer-link {
         @extend %lakes-medium;
         color: #1B1C21;
@@ -549,10 +599,132 @@ button {
 }
 
 //------------------------------------------------------------------
-//END------------------------SIDEBR.HTML PAGE------------------------
+//END------------------------SIDEBR.HTML PAGE-----------------------
 //------------------------------------------------------------------
 
 
+//------------------------------------------------------------------
+//start----------------------BRANDS.HTML PAGE-----------------------
+//------------------------------------------------------------------
+.brands {
+    background-color: #F8F8F8;
+    padding-bottom: 38px;
+
+    &__wrapper {
+        margin-left: 13px;
+    }
+
+    &__title {
+        .brands__wrapper {
+            margin: 0;
+        }
+    }
+
+    &__slider {
+        min-height: 124px;
+        position: relative;
+
+        &::before {
+            content: '';
+            top: 17px;
+            right: 3px;
+            position: absolute;
+            width: 24px;
+            height: 81px;
+            background-image: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+            z-index: 2;
+        }
+    }
+
+    &__slider-items {
+        padding-top: 24px;
+        transition: .5s;
+
+    }
+
+    &__slider-item {
+        max-width: 240px;
+
+    }
+
+    &__slider-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        border: 1px solid #EAEAEA;
+        border-radius: 6px;
+        padding: 0 16px;
+        line-height: 0;
+        height: 72px;
+    }
+
+    &__buttton-arrow {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        color: #1B1C21;
+        letter-spacing: -0.2px;
+        position: relative;
+        padding-left: 25px;
+        @extend %lakes-medium;
+        display: none;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 7.5px;
+            height: 10.3px;
+            background-image: url(../assets/image/icon/arrow-down.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            left: 0;
+            top: 4px;
+            transition: .5s;
+            transform: rotate(180deg);
+        }
+
+    }
+
+    .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background-color: #DDDDDD;
+    }
+
+
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background-color: #B5B6BC;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        bottom: -7px;
+    }
+}
+
+.brands__slider.brands__slider--active {
+    .brands__slider-items {
+        height: 176px;
+
+    }
+
+    .brands__slider-item {
+        height: 72px;
+    }
+}
+
+.brands__buttton-arrow.brands__buttton-arrow--active::after {
+    transform: rotate(0deg);
+}
+
+
+//------------------------------------------------------------------
+//END------------------------BRANDS.HTML PAGE-----------------------
+//------------------------------------------------------------------
 
 //------------------------------------------------------------------
 //START----------------------MEDIA REQUESTS-------------------------
@@ -596,7 +768,6 @@ button {
         .services-box {
             padding-top: 32px;
 
-
             &__content {
                 display: flex;
                 justify-content: space-between;
@@ -629,6 +800,57 @@ button {
 
     }
 
+}
+
+@media (min-width: 760px) {
+
+    .brands {
+        &__wrapper {
+            max-width: 94%;
+            margin: 0 auto;
+        }
+        &__slider::before{
+            display: none;
+        }
+
+        &__title {
+            .brands__wrapper {
+                margin: 0 auto;
+            }
+        }
+
+        &__slider-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 224px;
+                height: 0;
+                // flex: auto;
+            }
+
+        }
+
+        &__slider-item {
+            max-width: 224px;
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        &__buttton-arrow {
+            display: block;
+        }
+
+    }
+
+    .subtitle {
+        &__title {
+            padding-left: 0;
+        }
+    }
 }
 
 
@@ -701,8 +923,17 @@ button {
                 max-width: 47.5%;
             }
         }
+    }
 
-
+    .brands {
+        &__slider-items{
+            &::after{
+                width: 240px;
+            }
+        }
+        &__slider-item {
+            max-width: 240px;
+        }
     }
 }
 
