@@ -239,8 +239,6 @@ button {
   }
 }
 
-
-
 .info-buttons {
   display: flex;
   justify-content: space-between;
@@ -700,10 +698,6 @@ button {
   position: relative;
   z-index: 0;
 
-  &__wrapper {
-    // margin-left: 13px;
-  }
-
   &__inner {
     min-height: 116px;
     position: relative;
@@ -886,7 +880,6 @@ button {
 
   .slider-sample__inner {
     min-height: 212px;
-    // border: 1px solid red;
   }
 
   .slider-sample__inner::before {
