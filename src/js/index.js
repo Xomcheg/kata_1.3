@@ -13,7 +13,7 @@ for (let i = 0; i < resizeBtns.length; i++) {
 function resizeFunction(item, i){
     let number = i;
     item.addEventListener('click', function(){
-        if (resizeBlocks[i].classList.contains('slider-sample--active')) {
+        if (resizeBlocks[i].classList.contains('slider-sample__inner--active')) {
             resizeRemoveClass(number);
         } else {
             resizeAddClass(number);
@@ -22,7 +22,7 @@ function resizeFunction(item, i){
 }
 
 // resizeBtn.addEventListener('click', function () {
-//     if (resizeBlock.classList.contains('slider-sample--active')) {
+//     if (resizeBlock.classList.contains('slider-sample__inner--active')) {
 //         resizeRemoveClass();
 //     } else {
 //         resizeAddClass();
@@ -32,22 +32,22 @@ function resizeFunction(item, i){
 let mySwiper = null;
 
 function resizeAddClass(number) {
-    resizeBlocks[number].classList.add('slider-sample--active');
+    resizeBlocks[number].classList.add('slider-sample__inner--active');
     resizeBtns[number].classList.add('slider-sample__button--active');
     resizeBtns[number].textContent = "Показать все";
 }
 
 function resizeRemoveClass(number) {
-    resizeBlocks[number].classList.remove('slider-sample--active');
+    resizeBlocks[number].classList.remove('slider-sample__inner--active');
     resizeBtns[number].classList.remove('slider-sample__button--active');
     resizeBtns[number].textContent = "Скрыть";
 }
 
 
 function swiperOn() {
-    if (resizeBlocks[0].classList.contains('slider-sample--active')) {
+    if (resizeBlocks[0].classList.contains('slider-sample__inner--active')) {
         for (let i = 0; i < resizeBlocks.length; i++) {
-            resizeBlocks[i].classList.remove('slider-sample--active');
+            resizeBlocks[i].classList.remove('slider-sample__inner--active');
             resizeBtns[i].classList.remove('slider-sample__button--active');
         }
     }
