@@ -1641,8 +1641,6 @@ button {
     }
   }
 
-
-
 }
 
 @media (min-width: 971px) {
@@ -1681,8 +1679,6 @@ button {
           margin-right: 8px;
           letter-spacing: -0.2px;
           transition: .3s ease-out;
-          // backface-visibility: hidden;
-          // will-change: transform;
         }
 
         .info-buttons__img {
@@ -1700,7 +1696,6 @@ button {
         }
       }
     }
-
     .services-box {
       padding-top: 8px;
 
