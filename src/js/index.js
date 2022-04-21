@@ -128,6 +128,21 @@ messageOverlay.addEventListener('click', function() {
 });
 
 
+let resizeDescriptionsBlock = document.querySelector('.services-box__info');
+let resizeDescriptionsBlockBtn = document.querySelector('.services-box__info-btn');
+
+resizeDescriptionsBlockBtn.addEventListener('click', function(){
+    if (resizeDescriptionsBlock.classList.contains('services-box__info--active')){
+        resizeDescriptionsBlock.classList.remove('services-box__info--active');
+        resizeDescriptionsBlockBtn.classList.remove('services-box__info-btn--active');
+    } else {
+        resizeDescriptionsBlock.classList.add('services-box__info--active');
+        resizeDescriptionsBlockBtn.classList.add('services-box__info-btn--active');
+    }
+    
+});
+
+
 
 // window.addEventListener('resize', function () {
 //     let widthEl = document.documentElement.clientWidth;

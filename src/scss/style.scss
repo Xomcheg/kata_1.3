@@ -255,11 +255,10 @@ button {
     background-color: transparent;
     cursor: pointer;
     transition: .5s;
+  }
 
-
-    &__text {
-      @extend %lakes-medium;
-    }
+  &__text {
+    @extend %lakes-medium;
   }
 }
 
@@ -315,7 +314,6 @@ button {
 
   &__buttons.info-buttons {
     display: none;
-
   }
 
   &__title {
@@ -344,17 +342,34 @@ button {
     position: relative;
 
     &__buttons {
-      margin-left: 16px;
+      display: flex;
+      padding-left: 15px;
 
       &::after {
         content: '';
         position: absolute;
         right: 0;
-        top: 25px;
+        top: 24px;
         width: 24px;
         height: 40px;
         background-image: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+
       }
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 22px;
+        width: 24px;
+        height: 40px;
+        background-image: linear-gradient(450deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+
+      }
+    }
+
+    &__buttons-item {
+      flex: 0 0 auto;
     }
 
     &__btn {
@@ -363,16 +378,6 @@ button {
       &:hover:not(.services-box__btn--active) {
         color: $light-red;
       }
-    }
-
-    &__title {
-      display: none;
-      letter-spacing: -0.2px;
-      font-size: 1rem;
-      color: $text-dark-gray;
-      padding-top: 14px;
-      margin-left: 56px;
-      @extend %lakes-medium;
     }
 
     &__content {
@@ -387,6 +392,7 @@ button {
 
 .services-box {
   padding-top: 24px;
+  overflow-x: hidden;
 
   &__wrapper {
     margin-bottom: 16px;
@@ -405,29 +411,34 @@ button {
   }
 
   &__btn {
-    padding: 8px 17px;
+    padding: 8px 21px;
     border: 2px solid transparent;
     border-radius: 5px;
-    letter-spacing: -0.6px;
+    letter-spacing: -0.2px;
     line-height: 1.125rem;
     color: $text-dark-gray;
-    flex-shrink: 0;
-
     cursor: pointer;
+    @extend %lakes-medium;
+    display: inline-block;
 
     &--active {
       border-color: #B8FFEC;
+      background-color: #fff;
     }
   }
 
   &__info {
     max-height: 90px;
-    overflow-y: scroll;
+    overflow-y: hidden;
 
-    &::-webkit-scrollbar {
-      width: 0;
-      height: 0;
+    &.services-box__info--active {
+      max-height: 100%;
     }
+
+    // &::-webkit-scrollbar {
+    //   width: 0;
+    //   height: 0;
+    // }
   }
 
   &__info-text {
@@ -461,6 +472,12 @@ button {
       background-size: cover;
       z-index: 4;
     }
+
+    &.services-box__info-btn--active {
+      &::before {
+        transform: rotate(180deg);
+      }
+    }
   }
 }
 
@@ -474,7 +491,7 @@ button {
 //------------------------------------------------------------------
 .main {
   position: relative;
-
+  overflow-x: scroll;
 }
 
 .sidebar {
@@ -518,7 +535,6 @@ button {
     min-height: 100vh;
     box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
       16px 0px 52px rgba(14, 24, 80, 0.2);
-    // overflow-y: scroll;
   }
 
   &__wrapper {
@@ -987,13 +1003,6 @@ button {
     }
   }
 
-  // &__slider-btn-wrapper {
-
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: space-between;
-
-  // }
 
   &__slider-btn-icon {
     position: relative;
@@ -1003,7 +1012,6 @@ button {
 
   .slider-sample__inner {
     min-height: 249px;
-    // border: 1px solid red;
   }
 
   .slider-sample__inner::before {
@@ -1298,7 +1306,6 @@ button {
     background-color: $light-red;
     border-radius: 16px;
     padding: 5px 8px 4px 16px;
-    // position: relative;
     bottom: 16px;
     right: 16px;
     cursor: pointer;
@@ -1316,12 +1323,6 @@ button {
       border-color: $light-red;
     }
   }
-
-  // &__form-btn-wrapper {
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: space-between;
-  // }
 
 
 }
@@ -1391,14 +1392,12 @@ button {
       }
 
       &__wrapper {
-        max-width: 328px;
+        max-width: 490px;
         width: 100%;
         padding: 0 0 0 16px;
       }
 
       &__info {
-        // max-height: 100%;
-        // overflow-y: visible;
         min-height: 160px;
       }
 
@@ -1636,7 +1635,17 @@ button {
 
 }
 
-@media (min-width: 971px) {
+@media (min-width: 850px) {
+  // .services{
+
+  //   .services-box__content{
+  //     justify-content: space-around;
+  //   }
+
+  // }
+}
+
+@media (min-width: 1094px) {
   .header {
     display: none;
   }
@@ -1689,12 +1698,16 @@ button {
         }
       }
     }
+
     .services-box {
       padding-top: 8px;
 
-
       &__title {
         display: block;
+      }
+
+      &__nav {
+        max-width: 98%;
       }
 
       &__wrapper {
@@ -1706,9 +1719,22 @@ button {
       &__buttons {
         max-width: 1063px;
         margin-left: 33px;
+        overflow-x: visible;
+        flex-wrap: wrap;
+        padding-left: 0;
+        justify-content: space-between;
+        position: relative;
+        gap: 5px;
 
-        &::after {
-          // display: none;
+        &::after,
+        &::before {
+          display: none;
+        }
+      }
+
+      &__buttons-item {
+        &:last-child {
+          margin-right: auto;
         }
       }
 
@@ -1717,9 +1743,8 @@ button {
       }
 
       &__info {
-        max-height: 100%;
-        overflow-y: visible;
-        // min-height: 160px;
+        // max-height: 100%;
+        // overflow-y: visible;
       }
 
       &__info-btn {
@@ -1755,17 +1780,18 @@ button {
     max-width: 1120px;
     width: 100%;
     position: relative;
+    flex-shrink: 1;
   }
 
   .sidebar {
-    position: relative;
+    position: static;
     transform: translateX(0);
     max-width: 320px;
     flex-basis: 320px;
     width: 320px;
     order: -1;
     align-self: stretch;
-    flex-shrink: 2;
+    flex-shrink: 0;
     height: 100%;
     overflow-y: auto;
 
